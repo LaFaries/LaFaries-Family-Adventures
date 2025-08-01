@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LaFaries Family Intro</title>
+  <style>
+    body {
+      background-color: #fcf4e6;
+      font-family: "Comic Sans MS", cursive;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #b84f22;
+      font-size: 2.5rem;
+    }
+    button {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      background-color: #d6a85a;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: fadeSlide 1.5s ease-out;
+}
+
+</style>
+</head>
+<body>
+
+<nav style="margin-bottom: 30px;">
+  <a href="index.html" style="margin-right: 20px; font-weight: bold; text-decoration: none; color: #b84f22;">🏠 Home Intro</a>
+  <a href="family.html" style="font-weight: bold; text-decoration: none; color: #b84f22;">👨‍👩‍👧‍👦 Meet the Family</a>
+</nav>
+
+  <h1>🎤 Meet the LaFaries Family</h1>
+  <p>Click the button below to hear each of us introduce ourselves!</p>
+  <button onclick="playIntro()">▶️ Play Family Intro</button>
+
+  <audio id="jae-intro" src="voices/Jae Voice.mp3"></audio>
+  <audio id="sarai-intro" src="voices/Aaron Voice 2.mp3"></audio>
+  <audio id="zara-intro" src="voices/Zara  script Audio.mp3"></audio>
+  <audio id="thad-intro" src="voices/Thad Voice.mp3"></audio>
+  <audio id="aaron-intro" src="voices/Aaron Voice.mp3"></audio>
+  <audio id="darian-intro" src="voices/Darian Voice.mp3"></audio>
+  <audio id="aunti-krystal-intro" src="voices/Aunti Krystal Voice.mp3"></audio>
+  <audio id="uncle-mike-intro" src="voices/Uncle Mike voice.mp3"></audio>
+  <audio id="grandma-lafaries-intro" src="voices/ElevenLabs_2025-07-25T22_27_49_LaFaries Clone_ivc_sp96_s50_sb75_se0_b_m2.mp3"></audio>
+  <audio id="granddad-david-intro" src="voices/Grand dad David Voice.mp3"></audio>
+
+  <script>
+    const audioSequence = ["jae-intro", "sarai-intro", "zara-intro", "thad-intro", "aaron-intro", "darian-intro", "aunti-krystal-intro", "uncle-mike-intro", "grandma-lafaries-intro", "granddad-david-intro"];
+
+    function playIntro(index = 0) {
+      if (index >= audioSequence.length) return;
+      const audio = document.getElementById(audioSequence[index]);
+      audio.play();
+      audio.onended = () => playIntro(index + 1);
+    }
+  </script>
+
+<audio autoplay loop id="theme-audio" src="voices/theme.mp3" style="display:none;"></audio>
+
+</body>
+</html>

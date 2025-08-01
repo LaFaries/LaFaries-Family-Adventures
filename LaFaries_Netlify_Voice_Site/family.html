@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LaFaries Family Grid</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive;
+      background-color: #fcf4e6;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #b84f22;
+    }
+    .family-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .character {
+      width: 150px;
+      padding: 10px;
+      background: #fff7ec;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .character img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #cf7342;
+    }
+    .name {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #8c5020;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎨 Meet the Whole LaFaries Family!</h1>
+  <p>Click any character to hear their voice!</p>
+  <div class="family-grid">
+    
+    <div class="character" onclick="document.getElementById('aaron-voice').play()">
+      <img src="https://imgur.com/AT2lUr7.png" alt="Aaron" />
+      <div class="name">Aaron</div>
+      <audio id="aaron-voice" src="voices/Aaron Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('sarai-voice').play()">
+      <img src="https://imgur.com/lgOH3Zj.png" alt="Sarai" />
+      <div class="name">Sarai</div>
+      <audio id="sarai-voice" src="voices/Aaron Voice 2.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('aunti-krystal-voice').play()">
+      <img src="https://imgur.com/wBuUBp3.png" alt="Aunti Krystal" />
+      <div class="name">Aunti Krystal</div>
+      <audio id="aunti-krystal-voice" src="voices/Aunti Krystal Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('darian-voice').play()">
+      <img src="https://imgur.com/iclnswa.png" alt="Darian" />
+      <div class="name">Darian</div>
+      <audio id="darian-voice" src="voices/Darian Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('granddad-david-voice').play()">
+      <img src="https://imgur.com/FrVjzsn.png" alt="Granddad David" />
+      <div class="name">Granddad David</div>
+      <audio id="granddad-david-voice" src="voices/Grand dad David Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('grandma-lafaries-voice').play()">
+      <img src="https://imgur.com/GZXr4jg.png" alt="Grandma LaFaries" />
+      <div class="name">Grandma LaFaries</div>
+      <audio id="grandma-lafaries-voice" src="voices/ElevenLabs_2025-07-25T22_27_49_LaFaries Clone_ivc_sp96_s50_sb75_se0_b_m2.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('jae-voice').play()">
+      <img src="https://imgur.com/RSD5FnP.png" alt="Jae" />
+      <div class="name">Jae</div>
+      <audio id="jae-voice" src="voices/Jae Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('uncle-mike-voice').play()">
+      <img src="https://imgur.com/YLDH4Uz.png" alt="Uncle Mike" />
+      <div class="name">Uncle Mike</div>
+      <audio id="uncle-mike-voice" src="voices/Uncle Mike voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('thad-voice').play()">
+      <img src="https://imgur.com/jj0cQKT.png" alt="Thad" />
+      <div class="name">Thad</div>
+      <audio id="thad-voice" src="voices/Thad Voice.mp3"></audio>
+    </div>
+    
+    <div class="character" onclick="document.getElementById('zara-voice').play()">
+      <img src="https://imgur.com/rXiFPGb.png" alt="Zara" />
+      <div class="name">Zara</div>
+      <audio id="zara-voice" src="voices/Zara  script Audio.mp3"></audio>
+    </div>
+    
+  </div>
+
+</body>
+</html>
